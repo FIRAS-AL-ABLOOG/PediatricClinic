@@ -1,0 +1,138 @@
+.location-page {
+  padding: 60px 20px;
+}
+
+.location-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.hours-card,
+.address-card {
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+
+  box-shadow: 0 10px 35px rgba(35, 90, 120, 0.08);
+}
+
+.hours-card h2,
+.address-card h2 {
+  color: #173b5c;
+  margin-bottom: 25px;
+}
+
+.hour-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 15px 0;
+  border-bottom: 1px solid #edf2f5;
+}
+
+.hour-row strong {
+  color: #526a7e;
+}
+
+.hour-row span {
+  color: #1596bd;
+  text-align: left;
+  font-size: 14px;
+}
+
+.hour-row span.closed {
+  color: #df6262;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8f7fb;
+  border-radius: 20px;
+
+  font-size: 55px;
+  margin-bottom: 25px;
+}
+
+.address-card p {
+  color: #718597;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.address-card > a {
+  display: inline-block;
+
+  padding: 11px 17px;
+  border-radius: 12px;
+
+  background: #16a5c9;
+  color: white;
+  font-size: 14px;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: #f4fbfd;
+  padding: 15px;
+  border-radius: 15px;
+
+  margin-top: 25px;
+}
+
+.contact-box > span {
+  font-size: 25px;
+}
+
+.contact-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-box small {
+  color: #8b9ca8;
+}
+
+.contact-box strong {
+  color: #173b5c;
+}
+
+@media (max-width: 750px) {
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .location-page {
+    padding: 40px 15px;
+  }
+
+  .hours-card,
+  .address-card {
+    padding: 20px;
+  }
+
+  .hour-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

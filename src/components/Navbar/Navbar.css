@@ -1,0 +1,353 @@
+/* ==================================================
+   Navbar
+================================================== */
+
+.navbar {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5edf5;
+
+  position: relative;
+
+  z-index: 1000;
+}
+
+
+/* ==================================================
+   Container
+================================================== */
+
+.navbar-container {
+  max-width: 1150px;
+
+  margin: auto;
+
+  min-height: 78px;
+
+  padding: 0 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* ==================================================
+   Logo
+================================================== */
+
+.clinic-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #173b5c;
+
+  flex-shrink: 0;
+}
+
+.clinic-logo > span {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #e5f7ff;
+
+  border-radius: 13px;
+
+  font-size: 22px;
+}
+
+.clinic-logo strong {
+  display: block;
+
+  font-size: 18px;
+
+  line-height: 1.3;
+}
+
+.clinic-logo small {
+  display: block;
+
+  color: #71879a;
+
+  font-size: 11px;
+
+  margin-top: 2px;
+}
+
+
+/* ==================================================
+   روابط Navbar
+================================================== */
+
+.navbar-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.navbar-links a {
+  padding: 10px 15px;
+
+  border-radius: 22px;
+
+  color: #526d80;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+
+  transition: 0.25s;
+}
+
+.navbar-links a:hover {
+  color: #1596bd;
+
+  background: #eef9fd;
+}
+
+.navbar-links a.active {
+  color: #1596bd;
+
+  background: #e5f7ff;
+
+  font-weight: 600;
+}
+
+
+/* ==================================================
+   زر القائمة ☰
+   مخفي على الكمبيوتر
+================================================== */
+
+.menu-toggle {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: none;
+
+  background: #e5f7ff;
+
+  border-radius: 12px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 21px;
+  height: 2px;
+
+  background: #173b5c;
+
+  border-radius: 5px;
+
+  transition: 0.3s;
+}
+
+
+/* ==================================================
+   حركة زر القائمة عند الفتح
+================================================== */
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ==================================================
+   Tablet
+================================================== */
+
+@media (max-width: 950px) {
+
+  .navbar-links a {
+    padding: 9px 10px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* ==================================================
+   Mobile
+================================================== */
+
+@media (max-width: 800px) {
+
+  .navbar-container {
+    min-height: 68px;
+
+    padding: 0 18px;
+
+    position: relative;
+  }
+
+
+  /* إظهار زر القائمة */
+
+  .menu-toggle {
+    display: flex;
+
+    cursor: pointer;
+  }
+
+
+  /* ==================================================
+     القائمة المنسدلة
+  ================================================== */
+
+  .navbar-links {
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+
+    right: 15px;
+    left: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5edf5;
+
+    border-radius: 18px;
+
+    padding: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 4px;
+
+    box-shadow:
+      0 12px 35px rgba(23, 59, 92, 0.12);
+
+    /* مخفية افتراضياً */
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+
+  /* القائمة عند الفتح */
+
+  .navbar-links.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+  }
+
+
+  /* روابط الموبايل */
+
+  .navbar-links a {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border-radius: 12px;
+
+    text-align: right;
+
+    font-size: 14px;
+  }
+
+
+  .navbar-links a:hover,
+  .navbar-links a.active {
+
+    background: #e5f7ff;
+
+    color: #1596bd;
+  }
+
+}
+
+
+/* ==================================================
+   شاشة صغيرة جداً
+================================================== */
+
+@media (max-width: 430px) {
+
+  .navbar-container {
+    padding: 0 14px;
+  }
+
+  .clinic-logo > span {
+    width: 40px;
+    height: 40px;
+
+    font-size: 20px;
+  }
+
+  .clinic-logo strong {
+    font-size: 16px;
+  }
+
+  .clinic-logo small {
+    font-size: 10px;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-links {
+    right: 10px;
+    left: 10px;
+  }
+
+}

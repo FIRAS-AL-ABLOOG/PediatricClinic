@@ -1,0 +1,463 @@
+/* ==================================================
+   Footer
+================================================== */
+
+.footer {
+  margin-top: 70px;
+  background: #173b5c;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* لمسة ضوئية بسيطة */
+
+.footer::before {
+  content: "";
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  background: rgba(22, 165, 201, 0.08);
+
+  top: -150px;
+  right: -100px;
+}
+
+.footer::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(22, 165, 201, 0.06);
+
+  bottom: -120px;
+  left: -80px;
+}
+
+
+/* ==================================================
+   Container
+================================================== */
+
+.footer-container {
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding: 55px 25px 45px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.4fr
+    1fr
+    1fr;
+
+  gap: 55px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ==================================================
+   الأقسام
+================================================== */
+
+.footer-section h3 {
+  font-size: 19px;
+
+  margin-bottom: 12px;
+
+  color: #ffffff;
+}
+
+
+/* ==================================================
+   معلومات العيادة
+================================================== */
+
+.footer-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.footer-logo-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #e5f7ff;
+
+  border-radius: 14px;
+
+  font-size: 25px;
+}
+
+.footer-brand h2 {
+  margin: 0;
+
+  font-size: 24px;
+
+  color: #ffffff;
+}
+
+.footer-logo span:not(.footer-logo-icon) {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #a9cbd9;
+
+  font-size: 12px;
+}
+
+.footer-description {
+  max-width: 360px;
+
+  line-height: 1.9;
+
+  color: #c4d8e2;
+
+  font-size: 14px;
+
+  margin-bottom: 22px;
+}
+
+
+/* ==================================================
+   زر الحجز
+================================================== */
+
+.footer-book-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 18px;
+
+  background: #16a5c9;
+
+  color: white;
+
+  border-radius: 25px;
+
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+
+.footer-book-btn span {
+  font-size: 18px;
+
+  transition: 0.3s;
+}
+
+.footer-book-btn:hover {
+  background: #1596bd;
+
+  transform: translateY(-2px);
+}
+
+.footer-book-btn:hover span {
+  transform: translateX(-4px);
+}
+
+
+/* ==================================================
+   الخط الصغير تحت العنوان
+================================================== */
+
+.footer-line {
+  width: 42px;
+
+  height: 3px;
+
+  border-radius: 5px;
+
+  background: #16a5c9;
+
+  margin-bottom: 20px;
+}
+
+
+/* ==================================================
+   الإرشادات
+================================================== */
+
+.tip-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 13px;
+}
+
+.tip-item span {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(22, 165, 201, 0.15);
+
+  color: #58d5f2;
+
+  font-size: 12px;
+}
+
+.tip-item p {
+  margin: 0;
+
+  color: #c4d8e2;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   التواصل
+================================================== */
+
+.footer-contact {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.contact-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 17px;
+
+  color: inherit;
+
+  transition: 0.25s;
+}
+
+.contact-item:hover {
+  transform: translateX(-3px);
+}
+
+.contact-icon {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(229, 247, 255, 0.1);
+
+  border: 1px solid rgba(229, 247, 255, 0.08);
+
+  border-radius: 11px;
+
+  font-size: 17px;
+}
+
+.contact-item small {
+  display: block;
+
+  color: #8faebd;
+
+  font-size: 11px;
+
+  margin-bottom: 3px;
+}
+
+.contact-item strong {
+  display: block;
+
+  color: #e9f7fc;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+
+/* ==================================================
+   أسفل الفوتر
+================================================== */
+
+.footer-bottom {
+  position: relative;
+
+  z-index: 2;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 18px 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #9db8c5;
+
+  font-size: 12px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom span {
+  color: #b9d2df;
+}
+
+
+/* ==================================================
+   Tablet
+================================================== */
+
+@media (max-width: 900px) {
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+/* ==================================================
+   Mobile
+================================================== */
+
+@media (max-width: 600px) {
+
+  .footer {
+    margin-top: 50px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    padding: 40px 22px 35px;
+
+    gap: 32px;
+
+    text-align: center;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-book-btn {
+    justify-content: center;
+  }
+
+  .footer-tips,
+  .footer-contact {
+    align-items: center;
+  }
+
+  .footer-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tip-item {
+    max-width: 300px;
+
+    text-align: right;
+  }
+
+  .contact-item {
+    text-align: right;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 18px 20px;
+  }
+
+}
+
+
+/* ==================================================
+   شاشة صغيرة جداً
+================================================== */
+
+@media (max-width: 400px) {
+
+  .footer-brand h2 {
+    font-size: 21px;
+  }
+
+  .footer-description {
+    font-size: 13px;
+  }
+
+  .footer-book-btn {
+    font-size: 13px;
+
+    padding: 10px 16px;
+  }
+
+}
